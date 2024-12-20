@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void Weapons Comparison - The Black Vault</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/ships.css">
+    <style>
+        .comparison-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .weapon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .weapon-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .weapon-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .weapon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .weapon-card.imperial::before { background: linear-gradient(90deg, #4169e1, #1e90ff); }
+        .weapon-card.chaos::before { background: linear-gradient(90deg, #8b0000, #ff0000); }
+        .weapon-card.eldar::before { background: linear-gradient(90deg, #87ceeb, #00bfff); }
+        .weapon-card.necron::before { background: linear-gradient(90deg, #00ff00, #32cd32); }
+        .weapon-card.tyranid::before { background: linear-gradient(90deg, #800080, #ff00ff); }
+        .weapon-card.ork::before { background: linear-gradient(90deg, #8b0000, #ff4500); }
+
+        .weapon-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .damage-bar {
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+
+        .damage-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .imperial .damage-fill { background: #4169e1; }
+        .chaos .damage-fill { background: #8b0000; }
+        .eldar .damage-fill { background: #87ceeb; }
+        .necron .damage-fill { background: #00ff00; }
+        .tyranid .damage-fill { background: #800080; }
+        .ork .damage-fill { background: #ff4500; }
+
+        .size-comparison-tool {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .ship-scale-container {
+            position: relative;
+            height: 600px;
+            background: url('../../images/grid-background.png');
+            margin: 20px 0;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .ship-scale-item {
+            position: absolute;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .ship-scale-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .filter-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-button.active {
+            background: #ffd700;
+            color: black;
+        }
+
+        .comparison-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: #ffd700;
+            color: black;
+        }
+
+        .weapon-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .special-rules {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="ship-page">
+    <header>
+        <div class="site-logo">
+            <a href="../../index.html">THE BLACK VAULT</a>
+        </div>
+    </header>
+
+    <main class="comparison-container">
+        <h1>Void Weapons Comparison</h1>
+
+        <div class="comparison-tabs">
+            <button class="tab-button active">Weapons</button>
+            <button class="tab-button">Ship Sizes</button>
+        </div>
+
+        <div class="filter-controls">
+            <button class="filter-button active">All Types</button>
+            <button class="filter-button">Lance Weapons</button>
+            <button class="filter-button">Broadside Batteries</button>
+            <button class="filter-button">Torpedoes</button>
+            <button class="filter-button">Bio-Weapons</button>
+            <button class="filter-button">Exotic Tech</button>
+        </div>
+
+        <section id="weapons-section">
+            <div class="weapon-grid">
+                <!-- Imperial Weapons -->
+                <div class="weapon-card imperial">
+                    <h2>Nova Cannon</h2>
+                    <div class="weapon-image" style="background-image: url('../../images/weapons/nova-cannon.jpg');"></div>
+                    <p>Massive shell-firing weapon that creates devastating spatial distortions on impact.</p>
+                    <div class="weapon-stats">
+                        <div class="stat-item">Range: Extreme</div>
+                        <div class="stat-item">Fire Rate: Very Low</div>
+                    </div>
+                    <h3>Damage Output</h3>
+                    <div class="damage-bar">
+                        <div class="damage-fill" style="width: 90%;"></div>
+                    </div>
+                    <div class="special-rules">
+                        <h4>Special Rules:</h4>
+                        <ul>
+                            <li>Area of Effect damage</li>
+                            <li>Requires careful targeting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Eldar Weapons -->
+                <div class="weapon-card eldar">
+                    <h2>Pulsar Lance</h2>
+                    <div class="weapon-image" style="background-image: url('../../images/weapons/pulsar-lance.jpg');"></div>
+                    <p>Advanced energy weapon that bypasses conventional shields with precise quantum strikes.</p>
+                    <div class="weapon-stats">
+                        <div class="stat-item">Range: Long</div>
+                        <div class="stat-item">Fire Rate: High</div>
+                    </div>
+                    <h3>Damage Output</h3>
+                    <div class="damage-bar">
+                        <div class="damage-fill" style="width: 75%;"></div>
+                    </div>
+                    <div class="special-rules">
+                        <h4>Special Rules:</h4>
+                        <ul>
+                            <li>Shield Penetration</li>
+                            <li>Precision Targeting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Necron Weapons -->
+                <div class="weapon-card necron">
+                    <h2>Gauss Arc Array</h2>
+                    <div class="weapon-image" style="background-image: url('../../images/weapons/gauss-arc.jpg');"></div>
+                    <p>Molecular disassembly beams that strip away matter at the atomic level.</p>
+                    <div class="weapon-stats">
+                        <div class="stat-item">Range: Medium</div>
+                        <div class="stat-item">Fire Rate: Sustained</div>
+                    </div>
+                    <h3>Damage Output</h3>
+                    <div class="damage-bar">
+                        <div class="damage-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="special-rules">
+                        <h4>Special Rules:</h4>
+                        <ul>
+                            <li>Armor Penetration</li>
+                            <li>Cumulative Damage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tyranid Bio-Weapons -->
+                <div class="weapon-card tyranid">
+                    <h2>Bio-Plasma Discharge</h2>
+                    <div class="weapon-image" style="background-image: url('../../images/weapons/bio-plasma.jpg');"></div>
+                    <p>Organic plasma projectors that spray corrosive energy in wide patterns.</p>
+                    <div class="weapon-stats">
+                        <div class="stat-item">Range: Short</div>
+                        <div class="stat-item">Fire Rate: Variable</div>
+                    </div>
+                    <h3>Damage Output</h3>
+                    <div class="damage-bar">
+                        <div class="damage-fill" style="width: 70%;"></div>
+                    </div>
+                    <div class="special-rules">
+                        <h4>Special Rules:</h4>
+                        <ul>
+                            <li>Continuous Damage</li>
+                            <li>Living Ammunition</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ork Weapons -->
+                <div class="weapon-card ork">
+                    <h2>Mega-Kannon</h2>
+                    <div class="weapon-image" style="background-image: url('../../images/weapons/mega-kannon.jpg');"></div>
+                    <p>Massive, crude, but surprisingly effective artillery that fires virtually anything as ammunition.</p>
+                    <div class="weapon-stats">
+                        <div class="stat-item">Range: "Really Far"</div>
+                        <div class="stat-item">Fire Rate: "When Ready"</div>
+                    </div>
+                    <h3>Damage Output</h3>
+                    <div class="damage-bar">
+                        <div class="damage-fill" style="width: 80%;"></div>
+                    </div>
+                    <div class="special-rules">
+                        <h4>Special Rules:</h4>
+                        <ul>
+                            <li>Unpredictable Damage</li>
+                            <li>Chance to Malfunction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="size-comparison-section" style="display: none;">
+            <div class="size-comparison-tool">
+                <h2>Ship Size Comparison</h2>
+                <div class="ship-scale-container">
+                    <!-- Ships will be positioned here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Black Vault - A Warhammer 40,000 Fan Site. This is a fan-made website and is not affiliated with Games Workshop.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabs = document.querySelectorAll('.tab-button');
+            const weaponsSection = document.getElementById('weapons-section');
+            const sizeSection = document.getElementById('size-comparison-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    if (this.textContent === 'Weapons') {
+                        weaponsSection.style.display = 'block';
+                        sizeSection.style.display = 'none';
+                    } else {
+                        weaponsSection.style.display = 'none';
+                        sizeSection.style.display = 'block';
+                    }
+                });
+            });
+
+            // Filter buttons
+            const filterButtons = document.querySelectorAll('.filter-button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Ship size comparison data
+            const ships = [
+                { name: 'Emperor Class Battleship', length: 8, faction: 'imperial' },
+                { name: 'Gloriana Class Battleship', length: 20, faction: 'imperial' },
+                { name: 'Battle Barge', length: 8, faction: 'astartes' },
+                { name: 'Cairn-class Tombship', length: 15, faction: 'necron' },
+                { name: 'Craftworld', length: 100, faction: 'eldar' },
+                { name: 'Space Rok', length: 20, faction: 'ork' }
+            ];
+
+            // Position ships in comparison view
+            const scaleContainer = document.querySelector('.ship-scale-container');
+            const containerHeight = 600;
+            
+            ships.forEach((ship, index) => {
+                const shipElement = document.createElement('div');
+                shipElement.className = `ship-scale-item ${ship.faction}`;
+                shipElement.style.top = `${(index * 80) + 20}px`;
+                shipElement.innerHTML = `
+                    <div class="ship-info">
+                        <h3>${ship.name}</h3>
+                        <p>Length: ${ship.length}km</p>
+                    </div>
+                `;
+                scaleContainer.appendChild(shipElement);
+            });
+        });
+    </script>
+    <!-- Add scripts at the end of body for better performance -->
+<script src="../../scripts/navigation.js"></script>
+</body>
+</html>

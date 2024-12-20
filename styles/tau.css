@@ -1,0 +1,148 @@
+/* T'au Empire Theme */
+:root {
+    --tau-primary: #4a90e2;
+    --tau-secondary: #2c3e50;
+    --tau-accent: #e74c3c;
+    --tau-text: #ecf0f1;
+    --tau-bg: #34495e;
+}
+
+.tau-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('../images/factions/tau/tau-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--tau-text);
+}
+
+/* Caste System Styling */
+.caste-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.caste-card {
+    background: rgba(44, 62, 80, 0.9);
+    border: 1px solid var(--tau-primary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.caste-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.caste-card h3 {
+    color: var(--tau-primary);
+    border-bottom: 2px solid var(--tau-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Military Forces Styling */
+.military-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.unit-category {
+    background: rgba(44, 62, 80, 0.8);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--tau-primary);
+}
+
+.unit-category h3 {
+    color: var(--tau-primary);
+    margin-bottom: 1rem;
+}
+
+.unit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.unit-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.unit-list li:last-child {
+    border-bottom: none;
+}
+
+/* Expansion Spheres Styling */
+.expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.expansion-card {
+    background: rgba(44, 62, 80, 0.9);
+    border: 1px solid var(--tau-accent);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.expansion-card h3 {
+    color: var(--tau-primary);
+    border-bottom: 2px solid var(--tau-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sept World Styling */
+.sept-worlds {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sept-card {
+    background: rgba(44, 62, 80, 0.8);
+    border: 1px solid var(--tau-primary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.sept-card h4 {
+    color: var(--tau-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .caste-grid,
+    .military-grid,
+    .expansion-grid,
+    .sept-worlds {
+        grid-template-columns: 1fr;
+    }
+    
+    .tau-hero {
+        padding: 4rem 1rem;
+    }
+}
+
+/* Animation Effects */
+.caste-card,
+.unit-category,
+.expansion-card,
+.sept-card {
+    transition: all 0.3s ease;
+}
+
+.caste-card:hover,
+.unit-category:hover,
+.expansion-card:hover,
+.sept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.2);
+}

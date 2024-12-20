@@ -1,0 +1,242 @@
+/* Character detail page layout */
+.character-detail {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.character-article {
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Character header styles */
+.character-header {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.character-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.character-header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.character-meta {
+    position: relative;
+    z-index: 2;
+    margin-top: 15px;
+}
+
+.character-meta span {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.timeline-event {
+    background: rgba(26, 26, 26, 0.8);
+    border-left: 4px solid #444;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-event:hover {
+    border-left-color: #666;
+    background: rgba(26, 26, 26, 0.9);
+}
+
+.timeline-event h3 {
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.timeline-event p {
+    color: #ccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Sidebar styles */
+.character-sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+}
+
+.quick-facts {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.quick-facts h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+.quick-facts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-facts li {
+    color: #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.quick-facts li:last-child {
+    border-bottom: none;
+}
+
+.related-content {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.related-content h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+.related-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-content a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.related-content a:hover {
+    color: #fff;
+}
+
+/* Content section styles */
+.abilities-content,
+.relationships-content,
+.legacy-content {
+    padding: 20px;
+}
+
+.abilities-content h3,
+.relationships-content h3,
+.legacy-content h3 {
+    color: #fff;
+    margin: 0 0 15px 0;
+}
+
+.abilities-content ul,
+.relationships-content ul,
+.legacy-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.abilities-content li,
+.relationships-content li,
+.legacy-content li {
+    color: #ccc;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.abilities-content li::before,
+.relationships-content li::before,
+.legacy-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+/* Character-specific backgrounds */
+.magnus { background-image: url('../images/characters/magnus.jpg'); }
+.yarrick { background-image: url('../images/characters/yarrick.jpg'); }
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .character-detail {
+        grid-template-columns: 1fr;
+    }
+    
+    .character-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .character-header h1 {
+        font-size: 2em;
+    }
+    
+    .character-meta span {
+        display: block;
+        margin: 5px auto;
+        max-width: 200px;
+    }
+}
+
+/* Animation effects */
+.character-header h1,
+.character-meta span {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drukhari (Dark Eldar) - Warhammer 40K</title>
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/faction.css">
+    <link rel="stylesheet" href="../../../styles/drukhari.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.1/dist/gsap.min.js"></script>
+</head>
+<body class="faction-body drukhari">
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <h1>Warhammer 40K</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../galaxy-map.html">Galaxy Map</a>
+            <a href="../index.html">Factions</a>
+        </div>
+    </nav>
+
+    <main class="faction-main">
+        <section class="faction-hero drukhari-hero">
+            <div class="hero-content">
+                <h1>The Drukhari</h1>
+                <p>Masters of Pain, Lords of Commorragh</p>
+            </div>
+        </section>
+
+        <section class="faction-overview">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <h2>Overview</h2>
+                    <p>The Drukhari, also known as the Dark Eldar, are the dark kin of the Aeldari who reside in the dark city of Commorragh. They sustain themselves on the suffering of others, conducting raids across the galaxy to capture slaves and feed their endless hunger for pain and torment. Unlike their Craftworld cousins, they fully embrace the excesses that led to the Fall, using ancient technology and dark arts to preserve their immortality through the suffering of others.</p>
+                    
+                    <div class="faction-stats">
+                        <div class="stat-card">
+                            <h3>Society</h3>
+                            <p>A complex hierarchy based on power, cunning, and the ability to inflict suffering. Social status is maintained through constant political intrigue and violence.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Technology</h3>
+                            <p>Advanced weaponry powered by dark matter and souls, including anti-gravitational devices and weapons that kill through pure pain.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Combat Style</h3>
+                            <p>Lightning-fast raids utilizing advanced technology and psychological warfare to terrorize and capture their victims.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Weaknesses</h3>
+                            <p>Constant need to replenish their souls through others' suffering, vulnerability to psychic attacks, and internal political strife.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="power-groups">
+            <h2>Power Structure</h2>
+            <div class="power-grid">
+                <div class="power-card kabals">
+                    <h3>Kabals</h3>
+                    <div class="power-content">
+                        <img src="../../../images/drukhari/kabal.jpg" alt="Kabal Warriors">
+                        <div class="kabal-details">
+                            <h4>Notable Kabals</h4>
+                            <div class="kabal-card">
+                                <h5>Kabal of the Black Heart</h5>
+                                <p>Led by Asdrubael Vect, the supreme overlord of Commorragh. The most powerful and influential kabal in the Dark City.</p>
+                                <ul>
+                                    <li><strong>Leader:</strong> Asdrubael Vect</li>
+                                    <li><strong>Specialty:</strong> Political manipulation and military might</li>
+                                    <li><strong>Colors:</strong> Black and deep purple</li>
+                                </ul>
+                            </div>
+                            <div class="kabal-card">
+                                <h5>Kabal of the Poisoned Tongue</h5>
+                                <p>Masters of toxins and political intrigue, led by Lady Malys.</p>
+                                <ul>
+                                    <li><strong>Leader:</strong> Lady Malys</li>
+                                    <li><strong>Specialty:</strong> Assassination and poisoncraft</li>
+                                    <li><strong>Colors:</strong> Emerald and black</li>
+                                </ul>
+                            </div>
+                            <div class="kabal-card">
+                                <h5>Kabal of the Obsidian Rose</h5>
+                                <p>Renowned for their superior weaponry and technical expertise.</p>
+                                <ul>
+                                    <li><strong>Leader:</strong> Aestra Khromys</li>
+                                    <li><strong>Specialty:</strong> Advanced weaponry</li>
+                                    <li><strong>Colors:</strong> Black and crimson</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="power-card wych-cults">
+                    <h3>Wych Cults</h3>
+                    <div class="power-content">
+                        <img src="../../../images/drukhari/wych.jpg" alt="Wych Cult">
+                        <div class="cult-details">
+                            <h4>Notable Cults</h4>
+                            <div class="cult-card">
+                                <h5>Cult of Strife</h5>
+                                <p>The most prestigious gladiatorial cult, led by Lelith Hesperax.</p>
+                                <ul>
+                                    <li><strong>Leader:</strong> Lelith Hesperax</li>
+                                    <li><strong>Specialty:</strong> Unparalleled close combat</li>
+                                    <li><strong>Arena:</strong> The Crucibael</li>
+                                </ul>
+                            </div>
+                            <div class="cult-card">
+                                <h5>Cult of the Red Grief</h5>
+                                <p>Specialists in high-speed combat using Reaver jetbikes.</p>
+                                <ul>
+                                    <li><strong>Specialty:</strong> Aerial combat</li>
+                                    <li><strong>Signature:</strong> Reaver jetbike formations</li>
+                                </ul>
+                            </div>
+                            <div class="cult-card">
+                                <h5>Cult of the Cursed Blade</h5>
+                                <p>Known for their deadly blade-work and acrobatic prowess.</p>
+                                <ul>
+                                    <li><strong>Specialty:</strong> Blade mastery</li>
+                                    <li><strong>Signature:</strong> Impossible acrobatics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="power-card haemonculus">
+                    <h3>Haemonculus Covens</h3>
+                    <div class="power-content">
+                        <img src="../../../images/drukhari/haemonculus.jpg" alt="Haemonculus">
+                        <div class="coven-details">
+                            <h4>Notable Covens</h4>
+                            <div class="coven-card">
+                                <h5>The Prophets of Flesh</h5>
+                                <p>Led by Urien Rakarth, masters of flesh-crafting and regeneration.</p>
+                                <ul>
+                                    <li><strong>Leader:</strong> Urien Rakarth</li>
+                                    <li><strong>Specialty:</strong> Flesh-crafting</li>
+                                    <li><strong>Creations:</strong> Grotesques and Talos Pain Engines</li>
+                                </ul>
+                            </div>
+                            <div class="coven-card">
+                                <h5>The Dark Creed</h5>
+                                <p>Specialists in psychological warfare and terror tactics.</p>
+                                <ul>
+                                    <li><strong>Specialty:</strong> Fear manipulation</li>
+                                    <li><strong>Signature:</strong> Living nightmares</li>
+                                </ul>
+                            </div>
+                            <div class="coven-card">
+                                <h5>The Coven of Twelve</h5>
+                                <p>Ancient masters of pain-based technologies.</p>
+                                <ul>
+                                    <li><strong>Specialty:</strong> Pain engines</li>
+                                    <li><strong>Signature:</strong> Regenerative arts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="military-forces">
+            <h2>Military Forces</h2>
+            <div class="force-categories">
+                <div class="force-category">
+                    <h3>Raiders and Ravagers</h3>
+                    <p>The backbone of Drukhari strike forces, these anti-gravitic vessels combine incredible speed with devastating firepower.</p>
+                    <ul class="force-details">
+                        <li><strong>Raiders:</strong> Transport craft equipped with dark lances</li>
+                        <li><strong>Ravagers:</strong> Heavy gunships with multiple weapon systems</li>
+                        <li><strong>Tactics:</strong> Hit-and-run attacks, slave capture</li>
+                    </ul>
+                </div>
+
+                <div class="force-category">
+                    <h3>Elite Forces</h3>
+                    <p>Specialized warriors and assassins who excel in various aspects of combat and terror tactics.</p>
+                    <ul class="force-details">
+                        <li><strong>Incubi:</strong> Elite warrior-mercenaries</li>
+                        <li><strong>Mandrakes:</strong> Shadow-dwelling assassins</li>
+                        <li><strong>Scourges:</strong> Winged raiders and scouts</li>
+                    </ul>
+                </div>
+
+                <div class="force-category">
+                    <h3>Coven Creations</h3>
+                    <p>Twisted biological and mechanical constructs created by the Haemonculi.</p>
+                    <ul class="force-details">
+                        <li><strong>Grotesques:</strong> Mutated combat slaves</li>
+                        <li><strong>Talos:</strong> Pain engines used for torture and combat</li>
+                        <li><strong>Cronos:</strong> Soul-harvesting constructs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="notable-characters">
+            <h2>Notable Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <h3>Asdrubael Vect</h3>
+                    <div class="character-content">
+                        <img src="../../../images/drukhari/characters/vect.jpg" alt="Asdrubael Vect">
+                        <div class="character-details">
+                            <p>Supreme Overlord of Commorragh and architect of the modern Drukhari society.</p>
+                            <ul>
+                                <li><strong>Title:</strong> Supreme Overlord</li>
+                                <li><strong>Kabal:</strong> The Black Heart</li>
+                                <li><strong>Age:</strong> Pre-dates The Fall</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <h3>Lelith Hesperax</h3>
+                    <div class="character-content">
+                        <img src="../../../images/drukhari/characters/lelith.jpg" alt="Lelith Hesperax">
+                        <div class="character-details">
+                            <p>The greatest gladiator in Commorragh's arenas, undefeated in single combat.</p>
+                            <ul>
+                                <li><strong>Title:</strong> Queen of Blades</li>
+                                <li><strong>Cult:</strong> Cult of Strife</li>
+                                <li><strong>Specialty:</strong> Unmatched combat skill</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <h3>Urien Rakarth</h3>
+                    <div class="character-content">
+                        <img src="../../../images/drukhari/characters/urien.jpg" alt="Urien Rakarth">
+                        <div class="character-details">
+                            <p>The most infamous Haemonculus, master of flesh-crafting and pain.</p>
+                            <ul>
+                                <li><strong>Title:</strong> Master Haemonculus</li>
+                                <li><strong>Coven:</strong> Prophets of Flesh</li>
+                                <li><strong>Specialty:</strong> Flesh-crafting, regeneration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-city">
+            <h2>Commorragh: The Dark City</h2>
+            <div class="city-districts">
+                <div class="district-card">
+                    <h3>High Commorragh</h3>
+                    <p>The spire-top domain of the most powerful Kabals, where the greatest power plays unfold.</p>
+                    <ul class="district-features">
+                        <li><strong>Landmarks:</strong> The Spires of Vect</li>
+                        <li><strong>Inhabitants:</strong> Archons and their courts</li>
+                        <li><strong>Security:</strong> Heavily defended</li>
+                    </ul>
+                </div>
+
+                <div class="district-card">
+                    <h3>The Crucibael</h3>
+                    <p>The greatest arena in the Dark City, where Wych Cults perform their deadly displays.</p>
+                    <ul class="district-features">
+                        <li><strong>Purpose:</strong> Gladiatorial combat</li>
+                        <li><strong>Capacity:</strong> Millions of spectators</li>
+                        <li><strong>Events:</strong> Death games, raids reenactments</li>
+                    </ul>
+                </div>
+
+                <div class="district-card">
+                    <h3>The Coven Quarters</h3>
+                    <p>Dark laboratories and torture chambers of the Haemonculus Covens.</p>
+                    <ul class="district-features">
+                        <li><strong>Features:</strong> Pain factories</li>
+                        <li><strong>Security:</strong> Labyrinthine defenses</li>
+                        <li><strong>Purpose:</strong> Flesh-crafting, regeneration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-units">
+            <h2>Notable Units</h2>
+            <div class="unit-categories">
+                <div class="unit-category">
+                    <h3>Infantry</h3>
+                    <div class="unit-grid">
+                        <div class="unit-card">
+                            <h4>Kabalite Warriors</h4>
+                            <img src="../../../images/drukhari/units/kabalite.jpg" alt="Kabalite Warriors">
+                            <p>The backbone of Kabal forces, armed with poisoned weapons.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Wyches</h4>
+                            <img src="../../../images/drukhari/units/wych.jpg" alt="Wyches">
+                            <p>Gladiatorial fighters specializing in close combat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit-category">
+                    <h3>Vehicles</h3>
+                    <div class="unit-grid">
+                        <div class="unit-card">
+                            <h4>Raider</h4>
+                            <img src="../../../images/drukhari/units/raider.jpg" alt="Raider">
+                            <p>Swift transport skimmer for raiding parties.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Ravager</h4>
+                            <img src="../../../images/drukhari/units/ravager.jpg" alt="Ravager">
+                            <p>Heavy gunboat equipped with dark lance weapons.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="combat-arena">
+            <h2>Commorragh Arena</h2>
+            <div class="arena-display">
+                <div class="arena-scene">
+                    <!-- 3D arena scene will be rendered here -->
+                </div>
+                <div class="arena-controls">
+                    <button class="arena-button" data-scene="gladiatorial">Gladiatorial Combat</button>
+                    <button class="arena-button" data-scene="beast">Beast Hunting</button>
+                    <button class="arena-button" data-scene="raid">Realspace Raid</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="faction-footer">
+        <div class="footer-content">
+            <p>Fear the Shadow Raiders of Commorragh</p>
+            <p>Warhammer 40,000 &copy; Games Workshop Limited</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/faction-page.js"></script>
+    <script src="../../../js/drukhari.js"></script>
+</body>
+</html>

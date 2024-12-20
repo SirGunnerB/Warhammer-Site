@@ -1,0 +1,50 @@
+:root {
+    /* Color System */
+    --primary-color: #d4af37;  /* Imperial Gold */
+    --secondary-color: #800000;  /* Blood Red */
+    --accent-color: #4a90e2;  /* Warp Blue */
+    --background-dark: #1a1a1a;
+    --background-light: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    
+    /* Faction Colors */
+    --imperium-gold: #d4af37;
+    --chaos-red: #800000;
+    --necron-green: #00ff00;
+    --eldar-blue: #4169e1;
+    --ork-green: #355e3b;
+    --tau-ochre: #cc5500;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-secondary: 'Times New Roman', serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 2px;
+    --border-radius-md: 4px;
+    --border-radius-lg: 8px;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+    
+    /* Z-index layers */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-tooltip: 1060;
+}

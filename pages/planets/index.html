@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notable Planets - Warhammer 40K</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/planets.css">
+    <script src="../../scripts/galaxy-map.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../factions/index.html">Factions</a>
+            <a href="../characters/index.html">Characters</a>
+            <a href="index.html">Planets</a>
+            <a href="../timeline/index.html">Timeline</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Notable Planets of the 41st Millennium</h1>
+
+        <section id="galaxy-map" class="map-section">
+            <h2>Galaxy Map</h2>
+            <div class="galaxy-map-container">
+                <div class="map-controls">
+                    <button id="reset-view">Reset View</button>
+                    <button id="toggle-sectors">Toggle Sectors</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="planet-filters" class="filters-section">
+            <h2>Filter Planets</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Classification:</label>
+                    <select id="classification-filter">
+                        <option value="all">All Classifications</option>
+                        <option value="throne">Throne World</option>
+                        <option value="forge">Forge World</option>
+                        <option value="hive">Hive World</option>
+                        <option value="death">Death World</option>
+                        <option value="chapter">Chapter World</option>
+                        <option value="craftworld">Craftworld</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select id="status-filter">
+                        <option value="all">All Statuses</option>
+                        <option value="active">Active</option>
+                        <option value="war">War Zone</option>
+                        <option value="destroyed">Destroyed</option>
+                        <option value="corrupted">Corrupted</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Allegiance:</label>
+                    <select id="allegiance-filter">
+                        <option value="all">All Allegiances</option>
+                        <option value="imperium">Imperium</option>
+                        <option value="chaos">Chaos</option>
+                        <option value="xenos">Xenos</option>
+                        <option value="contested">Contested</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="filter-button">Reset Filters</button>
+            </div>
+        </section>
+
+        <section id="imperial-worlds">
+            <h2>Imperial Worlds</h2>
+            <div class="planet-grid">
+                <article class="planet-card terra" data-classification="throne" data-status="active" data-allegiance="imperium">
+                    <h3>Terra (Holy Terra)</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Throne World</p>
+                            <p class="planet-status">Status: Heavily Fortified</p>
+                            <p class="planet-population">Population: Countless Billions</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Ancient birthplace of humanity and capital of the Imperium. Home to the Golden Throne and the Emperor of Mankind. The entire planet is covered in sprawling hive cities and ancient fortifications dating back to the Horus Heresy.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>The Imperial Palace</li>
+                                <li>The Golden Throne</li>
+                                <li>The Astronomican</li>
+                                <li>The Houses of Parliament</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card macragge" data-classification="chapter" data-status="active" data-allegiance="imperium">
+                    <h3>Macragge</h3>
+                    <div class="planet-info">
+                        <p>Capital of Ultramar and home of the Ultramarines Chapter. A model of Imperial efficiency and martial prowess.</p>
+                        <ul class="planet-details">
+                            <li><strong>Type:</strong> Chapter World</li>
+                            <li><strong>Status:</strong> Active</li>
+                            <li><strong>Notable Features:</strong> Fortress of Hera, Temple of Correction</li>
+                        </ul>
+                        <a href="macragge.html" class="read-more">Learn More</a>
+                    </div>
+                </article>
+
+                <article class="planet-card mars" data-classification="forge" data-status="active" data-allegiance="imperium">
+                    <h3>Mars</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Forge World</p>
+                            <p class="planet-status">Status: Heavily Industrialized</p>
+                            <p class="planet-population">Population: Billions</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Sacred home of the Adeptus Mechanicus and the greatest Forge World in the Imperium. The surface is covered in vast manufactory complexes and temples to the Machine God.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Olympus Mons Forge Complex</li>
+                                <li>The Noctis Labyrinthus</li>
+                                <li>The Vaults of Moravec</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card macragge" data-classification="chapter" data-status="active" data-allegiance="imperium">
+                    <h3>Macragge</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Chapter World</p>
+                            <p class="planet-status">Status: Fortified</p>
+                            <p class="planet-population">Population: Several Billion</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Home of the Ultramarines Chapter and capital of Ultramar. Known for its efficient governance and military strength. Site of the famous battle against Hive Fleet Behemoth.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Fortress of Hera</li>
+                                <li>Temple of Correction</li>
+                                <li>Shrine of the Primarch</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="death-worlds">
+            <h2>Death Worlds</h2>
+            <div class="planet-grid">
+                <article class="planet-card catachan" data-classification="death" data-status="active" data-allegiance="imperium">
+                    <h3>Catachan</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Death World</p>
+                            <p class="planet-status">Status: Hostile Environment</p>
+                            <p class="planet-population">Population: Several Million</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Known as the "Green Hell," Catachan is covered in lethal jungle where every form of life has evolved to kill. Home to the famous Catachan Jungle Fighters.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Brain Leaf Jungle</li>
+                                <li>Widow Maker Groves</li>
+                                <li>Death Valley Settlement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card fenris" data-classification="death" data-status="active" data-allegiance="imperium">
+                    <h3>Fenris</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Death World</p>
+                            <p class="planet-status">Status: Extreme Environment</p>
+                            <p class="planet-population">Population: Several Million</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Home world of the Space Wolves Chapter. A planet of arctic storms, volcanic activity, and massive beasts. The harsh environment shapes both its human inhabitants and the Space Wolves themselves.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>The Fang</li>
+                                <li>Asaheim</li>
+                                <li>The Sea of Storms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="forge-worlds">
+            <h2>Forge Worlds</h2>
+            <div class="planet-grid">
+                <article class="planet-card metalica" data-classification="forge" data-status="active" data-allegiance="imperium">
+                    <h3>Metalica</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Forge World</p>
+                            <p class="planet-status">Status: Industrial</p>
+                            <p class="planet-population">Population: Billions</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>One of the most productive Forge Worlds, known for its tank production and specialized war machines. The entire surface is covered in factories and industrial complexes.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Grand Manufactorum</li>
+                                <li>Data-Temples</li>
+                                <li>Titan Foundries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card ryza" data-classification="forge" data-status="war" data-allegiance="imperium">
+                    <h3>Ryza</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Forge World</p>
+                            <p class="planet-status">Status: Under Siege</p>
+                            <p class="planet-population">Population: Several Billion</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>Famous for its plasma technology and weapons manufacturing. Currently under constant threat from Ork invasions but continues to produce vital weapons for the Imperium.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Plasma Forges</li>
+                                <li>Defense Rings</li>
+                                <li>Ancient Reactors</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="xenos-worlds">
+            <h2>Xenos Worlds</h2>
+            <div class="planet-grid">
+                <article class="planet-card commorragh" data-classification="craftworld" data-status="active" data-allegiance="xenos">
+                    <h3>Commorragh</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Dark City</p>
+                            <p class="planet-status">Status: Hidden</p>
+                            <p class="planet-population">Unknown</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>The dark city of the Drukhari, located within the Webway. A twisted labyrinth of torture chambers, arenas, and spires where the Dark Eldar practice their cruel arts.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>The Black Heart</li>
+                                <li>Crucibael Arena</li>
+                                <li>Spires of Pain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card craftworld-ulthwe" data-classification="craftworld" data-status="active" data-allegiance="xenos">
+                    <h3>Craftworld Ulthwé</h3>
+                    <div class="planet-content">
+                        <div class="planet-info">
+                            <p class="planet-type">Classification: Craftworld</p>
+                            <p class="planet-status">Status: Mobile</p>
+                            <p class="planet-population">Several Million</p>
+                        </div>
+                        <div class="planet-history">
+                            <h4>History</h4>
+                            <p>One of the largest Aeldari Craftworlds, known for its powerful psykers and proximity to the Eye of Terror. Home to some of the most skilled farseers in the galaxy.</p>
+                            <h4>Notable Features</h4>
+                            <ul>
+                                <li>Dome of Crystal Seers</li>
+                                <li>Black Library Gateway</li>
+                                <li>Factories of Vaul</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Warhammer 40,000 Fan Site. This is a fan-made website and is not affiliated with Games Workshop.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filters = {
+                classification: 'all',
+                status: 'all',
+                allegiance: 'all'
+            };
+
+            // Filter elements
+            const classificationFilter = document.getElementById('classification-filter');
+            const statusFilter = document.getElementById('status-filter');
+            const allegianceFilter = document.getElementById('allegiance-filter');
+            const resetButton = document.getElementById('reset-filters');
+            const planetCards = document.querySelectorAll('.planet-card');
+
+            // Filter change handlers
+            classificationFilter.addEventListener('change', updateFilters);
+            statusFilter.addEventListener('change', updateFilters);
+            allegianceFilter.addEventListener('change', updateFilters);
+            resetButton.addEventListener('click', resetFilters);
+
+            function updateFilters() {
+                filters.classification = classificationFilter.value;
+                filters.status = statusFilter.value;
+                filters.allegiance = allegianceFilter.value;
+                applyFilters();
+            }
+
+            function resetFilters() {
+                classificationFilter.value = 'all';
+                statusFilter.value = 'all';
+                allegianceFilter.value = 'all';
+                updateFilters();
+            }
+
+            function applyFilters() {
+                planetCards.forEach(card => {
+                    const classification = card.dataset.classification;
+                    const status = card.dataset.status;
+                    const allegiance = card.dataset.allegiance;
+
+                    const matchesClassification = filters.classification === 'all' || classification === filters.classification;
+                    const matchesStatus = filters.status === 'all' || status === filters.status;
+                    const matchesAllegiance = filters.allegiance === 'all' || allegiance === filters.allegiance;
+
+                    if (matchesClassification && matchesStatus && matchesAllegiance) {
+                        card.style.display = '';
+                        card.classList.add('fade-in');
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('fade-in');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

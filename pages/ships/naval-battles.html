@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Naval Battles - The Black Vault</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/ships.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #ffd700;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .battle-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .battle-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #000;
+            border: 4px solid #ffd700;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .battle-content {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .battle-content:hover {
+            transform: scale(1.02);
+        }
+
+        .battle-year {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .battle-title {
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        .battle-description {
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .participants {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .faction-tag {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .imperial { background: #4169e1; }
+        .chaos { background: #8b0000; }
+        .eldar { background: #87ceeb; }
+        .necron { background: #00ff00; }
+        .tyranid { background: #800080; }
+
+        .battle-outcome {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        .casualties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .casualty-count {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .filter-controls {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .era-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .era-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: rgba(255, 215, 0, 0.1);
+            color: #ffd700;
+            transition: all 0.3s ease;
+        }
+
+        .era-button:hover {
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .era-button.active {
+            background: #ffd700;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="ship-page">
+    <header>
+        <div class="site-logo">
+            <a href="../../index.html">THE BLACK VAULT</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Famous Naval Battles of the 41st Millennium</h1>
+
+        <div class="filter-controls">
+            <div class="era-buttons">
+                <button class="era-button active">All Eras</button>
+                <button class="era-button">Great Crusade</button>
+                <button class="era-button">Horus Heresy</button>
+                <button class="era-button">Age of Apostasy</button>
+                <button class="era-button">Gothic War</button>
+                <button class="era-button">13th Black Crusade</button>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="battle-container left">
+                <div class="battle-content">
+                    <div class="battle-year">M31 - Isstvan III Atrocity</div>
+                    <h2 class="battle-title">The Opening of the Heresy</h2>
+                    <div class="participants">
+                        <span class="faction-tag imperial">Loyalist Forces</span>
+                        <span class="faction-tag chaos">Traitor Legions</span>
+                    </div>
+                    <p class="battle-description">The first major naval engagement of the Horus Heresy, where traitor vessels bombarded their own loyal brothers on the surface of Isstvan III.</p>
+                    <div class="battle-outcome">
+                        <h3>Outcome: Traitor Victory</h3>
+                        <div class="casualties">
+                            <div class="casualty-count">Loyalist Losses: Multiple Strike Cruisers</div>
+                            <div class="casualty-count">Traitor Losses: Minimal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-container right">
+                <div class="battle-content">
+                    <div class="battle-year">M41 - Battle of Macragge</div>
+                    <h2 class="battle-title">First Tyrannic War</h2>
+                    <div class="participants">
+                        <span class="faction-tag imperial">Ultramarines</span>
+                        <span class="faction-tag tyranid">Hive Fleet Behemoth</span>
+                    </div>
+                    <p class="battle-description">The climactic void battle between the Ultramarines fleet and Hive Fleet Behemoth, featuring the sacrifice of the Battle Barge Caesar.</p>
+                    <div class="battle-outcome">
+                        <h3>Outcome: Imperial Victory</h3>
+                        <div class="casualties">
+                            <div class="casualty-count">Imperial Losses: Heavy</div>
+                            <div class="casualty-count">Tyranid Losses: Near Total</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-container left">
+                <div class="battle-content">
+                    <div class="battle-year">M41 - Gothic War</div>
+                    <h2 class="battle-title">Battle of Gethsemane</h2>
+                    <div class="participants">
+                        <span class="faction-tag imperial">Imperial Navy</span>
+                        <span class="faction-tag chaos">Forces of Chaos</span>
+                    </div>
+                    <p class="battle-description">A massive naval engagement during the Gothic War, featuring the first deployment of Abaddon's Planet Killer.</p>
+                    <div class="battle-outcome">
+                        <h3>Outcome: Pyrrhic Imperial Victory</h3>
+                        <div class="casualties">
+                            <div class="casualty-count">Imperial Losses: Severe</div>
+                            <div class="casualty-count">Chaos Losses: Moderate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-container right">
+                <div class="battle-content">
+                    <div class="battle-year">M42 - Indomitus Crusade</div>
+                    <h2 class="battle-title">Battle of the Cadian Gate</h2>
+                    <div class="participants">
+                        <span class="faction-tag imperial">Imperial Navy</span>
+                        <span class="faction-tag chaos">Black Legion</span>
+                    </div>
+                    <p class="battle-description">The catastrophic naval battle that saw the destruction of Cadia and the formation of the Great Rift.</p>
+                    <div class="battle-outcome">
+                        <h3>Outcome: Chaos Victory</h3>
+                        <div class="casualties">
+                            <div class="casualty-count">Imperial Losses: Catastrophic</div>
+                            <div class="casualty-count">Chaos Losses: Heavy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-container left">
+                <div class="battle-content">
+                    <div class="battle-year">M41 - Orphean War</div>
+                    <h2 class="battle-title">Battle of Amarah</h2>
+                    <div class="participants">
+                        <span class="faction-tag imperial">Imperial Navy</span>
+                        <span class="faction-tag necron">Maynarkh Dynasty</span>
+                    </div>
+                    <p class="battle-description">A devastating encounter between Imperial forces and newly awakened Necron ships, showcasing the technological superiority of the ancient xenos vessels.</p>
+                    <div class="battle-outcome">
+                        <h3>Outcome: Necron Victory</h3>
+                        <div class="casualties">
+                            <div class="casualty-count">Imperial Losses: Near Total</div>
+                            <div class="casualty-count">Necron Losses: Light</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Black Vault - A Warhammer 40,000 Fan Site. This is a fan-made website and is not affiliated with Games Workshop.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eraButtons = document.querySelectorAll('.era-button');
+            
+            eraButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    eraButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    // Filter logic would go here
+                });
+            });
+
+            // Animate battle containers on scroll
+            const battleContainers = document.querySelectorAll('.battle-container');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            battleContainers.forEach(container => {
+                container.style.opacity = '0';
+                container.style.transform = 'translateY(20px)';
+                observer.observe(container);
+            });
+        });
+    </script>
+</body>
+</html>

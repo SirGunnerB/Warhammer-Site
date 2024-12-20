@@ -1,0 +1,116 @@
+/* Base Card Styles */
+.card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    transition: transform var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Faction Cards */
+.faction-card {
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.faction-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.faction-card__icon {
+    width: 48px;
+    height: 48px;
+}
+
+.faction-card__title {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.faction-card__content {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Planet Cards */
+.planet-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.planet-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.planet-card__content {
+    padding: var(--spacing-md);
+}
+
+.planet-card__title {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.planet-card__description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Character Cards */
+.character-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-md);
+}
+
+.character-card__image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.character-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.character-card__name {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.character-card__title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Battle Cards */
+.battle-card {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.battle-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.battle-card__date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

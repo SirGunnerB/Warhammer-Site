@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szarekhan Dynasty - The Silent King's Own - Warhammer 40K</title>
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/faction.css">
+    <link rel="stylesheet" href="../../../../styles/necrons.css">
+    <link rel="stylesheet" href="../../../../styles/dynasty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.1/dist/gsap.min.js"></script>
+</head>
+<body class="faction-body necrons szarekhan">
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="../../../../index.html">
+                <h1>Warhammer 40K</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../../necrons/index.html">Necrons</a>
+            <a href="../../../galaxy-map.html">Galaxy Map</a>
+            <a href="../../index.html">Factions</a>
+        </div>
+    </nav>
+
+    <main class="dynasty-main">
+        <section class="dynasty-hero">
+            <div class="hero-content">
+                <h1>Szarekhan Dynasty</h1>
+                <p class="dynasty-title">The Silent King's Own</p>
+            </div>
+            <div class="royal-sigil"></div>
+        </section>
+
+        <section class="silent-king">
+            <h2>The Silent King's Return</h2>
+            <div class="king-interface">
+                <div class="king-model">
+                    <!-- 3D model viewer -->
+                </div>
+                <div class="king-details">
+                    <h3>Szarekh</h3>
+                    <p>Last of the Silent Kings, architect of the biotransference, and supreme ruler of the Necrontyr Empire.</p>
+                    <div class="royal-stats">
+                        <div class="stat">
+                            <span>Command Authority</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <span>Military Might</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <span>Ancient Technology</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="royal-court">
+            <h2>The Royal Court</h2>
+            <div class="court-grid">
+                <div class="court-member" data-role="overlord">
+                    <h3>Triarch Praetorians</h3>
+                    <div class="member-content">
+                        <div class="member-image">
+                            <!-- Member image -->
+                        </div>
+                        <div class="member-details">
+                            <p>Elite guardians of ancient Necrontyr traditions and laws.</p>
+                            <ul class="member-abilities">
+                                <li>Enforcers of the King's Will</li>
+                                <li>Ancient Combat Protocols</li>
+                                <li>Triarch Authority</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="court-member" data-role="cryptek">
+                    <h3>Royal Crypteks</h3>
+                    <div class="member-content">
+                        <div class="member-image">
+                            <!-- Member image -->
+                        </div>
+                        <div class="member-details">
+                            <p>Masters of Necron super-science and technological sorcery.</p>
+                            <ul class="member-abilities">
+                                <li>Dimensional Engineering</li>
+                                <li>Chronodynamic Mastery</li>
+                                <li>Reality Manipulation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dynasty-protocols">
+            <h2>Royal Protocols</h2>
+            <div class="protocol-matrix">
+                <div class="protocol-viewer">
+                    <!-- Protocol visualization -->
+                </div>
+                <div class="protocol-list">
+                    <div class="protocol" data-protocol="command">
+                        <h3>Command Protocol</h3>
+                        <p>Direct neural interface with all dynasty forces.</p>
+                        <div class="protocol-activation">
+                            <button class="activate-btn">Activate</button>
+                            <div class="power-level">
+                                <div class="power-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="protocol" data-protocol="resurrection">
+                        <h3>Enhanced Reanimation</h3>
+                        <p>Advanced reconstruction protocols for fallen warriors.</p>
+                        <div class="protocol-activation">
+                            <button class="activate-btn">Activate</button>
+                            <div class="power-level">
+                                <div class="power-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="protocol" data-protocol="authority">
+                        <h3>Royal Authority</h3>
+                        <p>Project the Silent King's will across the battlefield.</p>
+                        <div class="protocol-activation">
+                            <button class="activate-btn">Activate</button>
+                            <div class="power-level">
+                                <div class="power-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="royal-arsenal">
+            <h2>Royal Arsenal</h2>
+            <div class="arsenal-grid">
+                <div class="weapon-card" data-weapon="staff">
+                    <h3>Staff of Stars</h3>
+                    <div class="weapon-content">
+                        <div class="weapon-image">
+                            <!-- Weapon image -->
+                        </div>
+                        <div class="weapon-stats">
+                            <div class="stat">
+                                <span>Power</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span>Range</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span>Accuracy</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weapon-card" data-weapon="scythe">
+                    <h3>Scepter of Eternal Glory</h3>
+                    <div class="weapon-content">
+                        <div class="weapon-image">
+                            <!-- Weapon image -->
+                        </div>
+                        <div class="weapon-stats">
+                            <div class="stat">
+                                <span>Power</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span>Range</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span>Accuracy</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="territory-map">
+            <h2>Dynasty Territory</h2>
+            <div class="map-interface">
+                <div class="galaxy-map">
+                    <!-- Interactive galaxy map -->
+                </div>
+                <div class="territory-stats">
+                    <h3>Domain Statistics</h3>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <span>Tomb Worlds</span>
+                            <div class="stat-value">147</div>
+                        </div>
+                        <div class="stat">
+                            <span>Active Forces</span>
+                            <div class="stat-value">89%</div>
+                        </div>
+                        <div class="stat">
+                            <span>Resource Worlds</span>
+                            <div class="stat-value">234</div>
+                        </div>
+                        <div class="stat">
+                            <span>Influence</span>
+                            <div class="stat-value">95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="faction-footer">
+        <div class="footer-content">
+            <p>Glory to the Silent King</p>
+            <p>Warhammer 40,000 © Games Workshop Limited</p>
+        </div>
+    </footer>
+
+    <script src="../../../../js/faction-page.js"></script>
+    <script src="../../../../js/necrons.js"></script>
+    <script src="../../../../js/dynasties/szarekhan.js"></script>
+</body>
+</html>

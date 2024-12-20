@@ -1,0 +1,157 @@
+/* Faction Pages Specific Styles */
+
+/* Chapter Grid */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chapter-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chapter-card:hover {
+    transform: translateY(-5px);
+}
+
+.chapter-content {
+    margin-top: 1rem;
+}
+
+.chapter-content ul {
+    margin-top: 1rem;
+}
+
+.chapter-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.chapter-content li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Battles Grid */
+.battles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.battle-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.battle-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+/* Units Grid */
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.unit-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.unit-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+/* Tactics Grid */
+.tactics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tactic-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tactic-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+/* Space Marines Specific */
+.space-marines {
+    --chapter-primary: #284f9e;
+    --chapter-secondary: #gold;
+}
+
+/* Combat Doctrines */
+.doctrines-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.doctrine-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Chapter Organization */
+.organization-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Recruitment Process */
+.recruitment-content {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.process-steps {
+    margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chapter-grid,
+    .battles-grid,
+    .units-grid,
+    .tactics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}

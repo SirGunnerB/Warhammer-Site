@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperium of Man - Warhammer 40K</title>
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/faction.css">
+    <link rel="stylesheet" href="../../../styles/imperium.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.1/dist/gsap.min.js"></script>
+</head>
+<body class="faction-body imperium">
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <h1>Warhammer 40K</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../galaxy-map.html">Galaxy Map</a>
+            <a href="../index.html">Factions</a>
+        </div>
+    </nav>
+
+    <main class="faction-main">
+        <section class="faction-hero imperium-hero">
+            <div class="hero-content">
+                <h1>The Imperium of Man</h1>
+                <p>For the Emperor! The Mightiest Empire in Human History</p>
+            </div>
+        </section>
+
+        <section class="faction-overview">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <h2>Overview</h2>
+                    <p>The Imperium of Man is the galactic empire of humanity, ruled by the God-Emperor of Mankind from His Golden Throne on Terra. It is the largest and most powerful political entity in the galaxy, consisting of at least a million worlds spread across most of the Milky Way Galaxy. Founded during the Great Crusade over ten thousand years ago, it stands as humanity's shield against the darkness of a hostile universe.</p>
+                    <p>Despite its vast power, the Imperium is a decaying empire, plagued by bureaucracy, superstition, and constant warfare. It maintains its grip on humanity through a combination of military might, religious devotion to the Emperor, and ruthless oppression of any who would threaten its rule.</p>
+                </div>
+                <div class="overview-stats">
+                    <h3>Empire Statistics</h3>
+                    <ul>
+                        <li>Territory: Million+ Worlds</li>
+                        <li>Population: Uncountable Trillions</li>
+                        <li>Military Strength: Vast</li>
+                        <li>Technology Level: Advanced/Ancient</li>
+                        <li>Government: Theocratic Oligarchy</li>
+                        <li>State Religion: Imperial Cult</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-organization">
+            <h2>Imperial Organization</h2>
+            <div class="org-grid">
+                <div class="org-card">
+                    <h3>Adeptus Terra</h3>
+                    <p>The central bureaucracy of the Imperium, comprising various administrative divisions:</p>
+                    <ul>
+                        <li>Administratum - Bureaucratic heart of the Imperium</li>
+                        <li>Ecclesiarchy - State church of the Imperial Cult</li>
+                        <li>Inquisition - Secret police and intelligence agency</li>
+                        <li>Officio Assassinorum - Imperial assassins</li>
+                    </ul>
+                </div>
+                <div class="org-card">
+                    <h3>Adeptus Mechanicus</h3>
+                    <p>Keepers of technology and industry, maintaining the Imperium's machinery and weapons:</p>
+                    <ul>
+                        <li>Forge Worlds - Industrial powerhouses</li>
+                        <li>Tech-Priests - Guardians of knowledge</li>
+                        <li>Titan Legions - God-machines of war</li>
+                    </ul>
+                </div>
+                <div class="org-card">
+                    <h3>Imperial Military</h3>
+                    <p>The armed forces of the Imperium:</p>
+                    <ul>
+                        <li>Adeptus Astartes - Space Marines</li>
+                        <li>Astra Militarum - Imperial Guard</li>
+                        <li>Imperial Navy - Space fleet</li>
+                        <li>Adepta Sororitas - Sisters of Battle</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-armies">
+            <h2>Military Forces</h2>
+            <div class="army-grid">
+                <div class="army-card" data-army="space-marines">
+                    <h3>Adeptus Astartes (Space Marines)</h3>
+                    <div class="army-content">
+                        <img src="../../../images/imperium/space-marines.jpg" alt="Space Marines">
+                        <p>The Emperor's finest warriors, genetically enhanced super-soldiers organized into various Chapters. Each Chapter consists of 1000 battle-brothers, armed with the finest weapons and equipped with power armor.</p>
+                        <div class="army-details">
+                            <h4>Notable Chapters:</h4>
+                            <ul>
+                                <li>Ultramarines - Guardians of Ultramar</li>
+                                <li>Dark Angels - The First Legion</li>
+                                <li>Space Wolves - Warriors of Fenris</li>
+                                <li>Blood Angels - The Angels of Baal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="army-card" data-army="imperial-guard">
+                    <h3>Astra Militarum (Imperial Guard)</h3>
+                    <div class="army-content">
+                        <img src="../../../images/imperium/imperial-guard.jpg" alt="Imperial Guard">
+                        <p>The backbone of the Imperium's military might, countless billions of human soldiers. They fight with determination and numbers, supported by vast arrays of tanks and artillery.</p>
+                        <div class="army-details">
+                            <h4>Famous Regiments:</h4>
+                            <ul>
+                                <li>Cadian Shock Troops</li>
+                                <li>Death Korps of Krieg</li>
+                                <li>Catachan Jungle Fighters</li>
+                                <li>Valhallan Ice Warriors</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="army-card" data-army="sisters">
+                    <h3>Adepta Sororitas (Sisters of Battle)</h3>
+                    <div class="army-content">
+                        <img src="../../../images/imperium/sisters-of-battle.jpg" alt="Sisters of Battle">
+                        <p>The military arm of the Ecclesiarchy, these warrior-nuns combine unshakeable faith with military might. They specialize in flame weapons and acts of faith.</p>
+                        <div class="army-details">
+                            <h4>Major Orders:</h4>
+                            <ul>
+                                <li>Order of Our Martyred Lady</li>
+                                <li>Order of the Sacred Rose</li>
+                                <li>Order of the Bloody Rose</li>
+                                <li>Order of the Ebon Chalice</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-units">
+            <h2>Notable Units</h2>
+            <div class="unit-categories">
+                <div class="unit-category">
+                    <h3>Infantry</h3>
+                    <div class="unit-grid">
+                        <div class="unit-card">
+                            <h4>Space Marine</h4>
+                            <img src="../../../images/imperium/units/space-marine.jpg" alt="Space Marine">
+                            <p>Elite transhuman warriors, the finest soldiers in the Imperium.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Guardsman</h4>
+                            <img src="../../../images/imperium/units/guardsman.jpg" alt="Imperial Guardsman">
+                            <p>The common soldier of the Imperium, countless in number.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Battle Sister</h4>
+                            <img src="../../../images/imperium/units/battle-sister.jpg" alt="Battle Sister">
+                            <p>Zealous warriors of the Ecclesiarchy, armed with bolter and faith.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit-category">
+                    <h3>Vehicles</h3>
+                    <div class="unit-grid">
+                        <div class="unit-card">
+                            <h4>Leman Russ Battle Tank</h4>
+                            <img src="../../../images/imperium/units/leman-russ.jpg" alt="Leman Russ Tank">
+                            <p>The main battle tank of the Imperial Guard, heavily armed and armored.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Land Raider</h4>
+                            <img src="../../../images/imperium/units/land-raider.jpg" alt="Land Raider">
+                            <p>Ancient and powerful Space Marine battle tank and transport.</p>
+                        </div>
+                        <div class="unit-card">
+                            <h4>Imperial Knight</h4>
+                            <img src="../../../images/imperium/units/imperial-knight.jpg" alt="Imperial Knight">
+                            <p>Noble-piloted walking weapons platforms of incredible power.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-hierarchy">
+            <h2>Command Structure</h2>
+            <div class="hierarchy-tree">
+                <div class="hierarchy-node emperor">
+                    <h3>Emperor of Mankind</h3>
+                    <p>The immortal ruler of humanity and the Imperium's divine sovereign, interred within the Golden Throne.</p>
+                </div>
+                <div class="hierarchy-level high-lords">
+                    <h3>High Lords of Terra</h3>
+                    <p>The ruling council that governs the Imperium in the Emperor's name, comprising leaders of the most powerful Imperial organizations.</p>
+                    <ul class="high-lords-list">
+                        <li>Master of the Administratum</li>
+                        <li>Fabricator-General of Mars</li>
+                        <li>Ecclesiarch</li>
+                        <li>Grand Provost Marshal</li>
+                        <li>Master of the Astronomican</li>
+                        <li>Grand Master of Assassins</li>
+                    </ul>
+                </div>
+                <div class="hierarchy-level sector-command">
+                    <h3>Sector Command</h3>
+                    <p>Regional governance structures managing Imperial territory:</p>
+                    <ul>
+                        <li>Sector Governors</li>
+                        <li>Planetary Governors</li>
+                        <li>System Lords</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-technology">
+            <h2>Imperial Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Weapons of War</h3>
+                    <ul>
+                        <li>Bolters - Standard Space Marine weapon</li>
+                        <li>Plasma Weapons - High-power energy weapons</li>
+                        <li>Power Weapons - Energy-sheathed close combat weapons</li>
+                        <li>Titan Weapons - God-machine armaments</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Defense Systems</h3>
+                    <ul>
+                        <li>Power Armor - Advanced protective suits</li>
+                        <li>Void Shields - Energy barrier technology</li>
+                        <li>Fortress Monasteries - Chapter strongholds</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Transportation</h3>
+                    <ul>
+                        <li>Warp Travel - Faster than light transportation</li>
+                        <li>Teleportation - Short-range matter transmission</li>
+                        <li>Grav Vehicles - Anti-gravity technology</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faction-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Gallery images will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="faction-footer">
+        <div class="footer-content">
+            <p>For the Emperor! Glory to the Imperium of Man!</p>
+            <p>Warhammer 40,000 &copy; Games Workshop Limited</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/faction-page.js"></script>
+    <script src="../../../js/imperium.js"></script>
+</body>
+</html>

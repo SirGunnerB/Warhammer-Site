@@ -1,0 +1,34 @@
+{
+  "name": "warhammer-website",
+  "version": "1.0.0",
+  "description": "An interactive web resource for exploring the Warhammer 40,000 universe.",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "postcss styles/main.css -o dist/css/main.min.css",
+    "css:watch": "postcss styles/main.css -o dist/css/main.min.css --watch",
+    "build": "npm run css:build",
+    "dev": "npm run css:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "warhammer",
+    "40k",
+    "interactive",
+    "lore",
+    "planets",
+    "galaxy-map"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}

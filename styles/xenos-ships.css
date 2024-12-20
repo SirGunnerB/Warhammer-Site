@@ -1,0 +1,148 @@
+/* Xenos Ships Specific Styling */
+
+/* Eldar Styling */
+.ship-page.eldar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e1e1ff;
+}
+
+.eldar .ship-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(45deg, #16213e 0%, #1a1a2e 100%);
+    box-shadow: 0 0 15px rgba(100, 149, 237, 0.1);
+    transition: all 0.3s ease;
+}
+
+.eldar .ship-card:hover {
+    box-shadow: 0 0 25px rgba(100, 149, 237, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Necron Styling */
+.ship-page.necron {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #00ff00;
+}
+
+.necron .ship-card {
+    border: 1px solid #00ff00;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+
+.necron .ship-card:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+}
+
+/* Ork Styling */
+.ship-page.ork {
+    background: linear-gradient(135deg, #1a2f1a 0%, #2a3f2a 100%);
+    color: #ffffff;
+}
+
+.ork .ship-card {
+    border: 2px solid #8b0000;
+    background: rgba(26, 47, 26, 0.9);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.2);
+}
+
+.ork .ship-card:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    transform: rotate(-1deg);
+}
+
+/* Tyranid Styling */
+.ship-page.tyranid {
+    background: linear-gradient(135deg, #2a0a2a 0%, #3a1a3a 100%);
+    color: #ff00ff;
+}
+
+.tyranid .ship-card {
+    border: 1px solid #800080;
+    background: rgba(42, 10, 42, 0.9);
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.2);
+}
+
+.tyranid .ship-card:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Common Xenos Elements */
+.xenos-tech-details {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.xenos-weapons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.weapon-system {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Race-specific Headers */
+.eldar h1, .eldar h2 {
+    color: #87ceeb;
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.3);
+}
+
+.necron h1, .necron h2 {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.ork h1, .ork h2 {
+    color: #ff4500;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    font-family: 'Impact', sans-serif;
+}
+
+.tyranid h1, .tyranid h2 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Unique Features Section */
+.unique-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-card {
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Animation Effects */
+@keyframes necronGlow {
+    0% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); }
+    50% { box-shadow: 0 0 25px rgba(0, 255, 0, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); }
+}
+
+@keyframes tyranidPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.necron .ship-card:hover {
+    animation: necronGlow 2s infinite;
+}
+
+.tyranid .ship-card:hover {
+    animation: tyranidPulse 2s infinite;
+}

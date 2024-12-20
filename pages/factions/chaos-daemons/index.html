@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Daemons - The Black Vault Warhammer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Faction-specific theme */
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #ff4444;
+            --accent-color: #ffa500;
+            --text-color: #ffffff;
+            --background-color: #1a0505;
+        }
+
+        .faction-header {
+            background: linear-gradient(rgba(139, 0, 0, 0.9), rgba(139, 0, 0, 0.7)),
+                        url('/images/factions/chaos-daemons/banner.jpg') center/cover;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .faction-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+        }
+    </style>
+</head>
+<body class="faction-page chaos-daemons">
+    <!-- Top Navigation -->
+    <nav class="wiki-nav">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">The Black Vault</a>
+                <div class="nav-links">
+                    <a href="/factions">Factions</a>
+                    <a href="/timeline">Timeline</a>
+                    <a href="/planets">Planets</a>
+                    <a href="/characters">Characters</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle">
+                    <span class="material-icons">dark_mode</span>
+                </button>
+                <button class="search-toggle">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Faction Header -->
+    <header class="faction-header">
+        <h1>Chaos Daemons</h1>
+        <p class="faction-subtitle">The Manifestations of the Dark Gods</p>
+    </header>
+
+    <main class="main-content">
+        <article class="faction-article">
+            <!-- Left Sidebar -->
+            <aside class="wiki-sidebar">
+                <div class="sidebar-box">
+                    <h3>Contents</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#gods">The Chaos Gods</a></li>
+                        <li><a href="#manifestation">Manifestation</a></li>
+                        <li><a href="#organization">Organization</a></li>
+                        <li><a href="#combat">Combat Doctrine</a></li>
+                        <li><a href="#notable-entities">Notable Entities</a></li>
+                        <li><a href="#notable-campaigns">Notable Campaigns</a></li>
+                        <li><a href="#daemon-engines">Daemon Engines</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="article-content">
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <p>Chaos Daemons are the manifestations of the Chaos Gods' will and power, immortal beings of pure Warp energy given form by the emotions and desires of mortal beings. Unlike their mortal followers, Daemons are purely creatures of the Warp, and their very existence in realspace is an anomaly that defies the natural laws of the material universe. Each Daemon is a fragment of their patron God's power and personality, ranging from the lowliest Nurgling to the mightiest Bloodthirster.</p>
+                    
+                    <div class="daemon-stats">
+                        <div class="stat-card">
+                            <h3>Nature</h3>
+                            <p>Immortal entities of pure Warp energy, embodying the darkest aspects of mortal emotions and desires.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Manifestation</h3>
+                            <p>Require significant Warp energy or reality breaches to maintain presence in realspace.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Weaknesses</h3>
+                            <p>Vulnerable to psychic wards, holy artifacts, and weapons imbued with anti-daemonic properties.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Strength</h3>
+                            <p>Nearly invulnerable to conventional weapons and capable of reforming in the Warp if banished.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="gods">
+                    <h2>The Chaos Gods</h2>
+                    <div class="god-cards">
+                        <div class="god-card khorne">
+                            <h3>Khorne - The Blood God</h3>
+                            <div class="god-content">
+                                <div class="god-description">
+                                    <p>The Blood God, lord of rage, violence, and warfare. His daemons are red-skinned warriors driven by bloodlust and martial pride.</p>
+                                    <h4>Daemon Types</h4>
+                                    <ul>
+                                        <li><strong>Bloodthirsters:</strong> Greater Daemons, the mightiest warriors of Khorne</li>
+                                        <li><strong>Bloodletters:</strong> Lesser Daemons, skilled warriors with hellblades</li>
+                                        <li><strong>Flesh Hounds:</strong> Daemonic beasts that hunt psykers</li>
+                                        <li><strong>Juggernauts:</strong> Brass-armored daemonic steeds</li>
+                                    </ul>
+                                </div>
+                                <div class="god-aspects">
+                                    <h4>Aspects</h4>
+                                    <ul>
+                                        <li><strong>Domain:</strong> Blood, War, Combat</li>
+                                        <li><strong>Symbol:</strong> Brass Skull Throne</li>
+                                        <li><strong>Sacred Number:</strong> 8</li>
+                                        <li><strong>Realm:</strong> The Brass Citadel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="god-card nurgle">
+                            <h3>Nurgle - The Plague Lord</h3>
+                            <div class="god-content">
+                                <div class="god-description">
+                                    <p>The Plague Lord, patron of disease, decay, and entropy. His daemons spread pestilence and corruption.</p>
+                                    <h4>Daemon Types</h4>
+                                    <ul>
+                                        <li><strong>Great Unclean Ones:</strong> Greater Daemons, living hosts of plague</li>
+                                        <li><strong>Plaguebearers:</strong> Lesser Daemons, counters of diseases</li>
+                                        <li><strong>Nurglings:</strong> Mischievous minor daemons</li>
+                                        <li><strong>Beasts of Nurgle:</strong> Slug-like creatures seeking "friendship"</li>
+                                    </ul>
+                                </div>
+                                <div class="god-aspects">
+                                    <h4>Aspects</h4>
+                                    <ul>
+                                        <li><strong>Domain:</strong> Disease, Decay, Endurance</li>
+                                        <li><strong>Symbol:</strong> Three Circles</li>
+                                        <li><strong>Sacred Number:</strong> 7</li>
+                                        <li><strong>Realm:</strong> The Garden of Nurgle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="god-card tzeentch">
+                            <h3>Tzeentch - The Changer of Ways</h3>
+                            <div class="god-content">
+                                <div class="god-description">
+                                    <p>The Changer of Ways, master of sorcery and manipulation. His daemons are masters of magic and deception.</p>
+                                    <h4>Daemon Types</h4>
+                                    <ul>
+                                        <li><strong>Lords of Change:</strong> Greater Daemons, master sorcerers</li>
+                                        <li><strong>Pink Horrors:</strong> Lesser Daemons that split into Blue Horrors</li>
+                                        <li><strong>Flamers:</strong> Living fonts of warpfire</li>
+                                        <li><strong>Screamers:</strong> Ray-like hunters of the Warp</li>
+                                    </ul>
+                                </div>
+                                <div class="god-aspects">
+                                    <h4>Aspects</h4>
+                                    <ul>
+                                        <li><strong>Domain:</strong> Change, Sorcery, Knowledge</li>
+                                        <li><strong>Symbol:</strong> Nine-Pointed Star</li>
+                                        <li><strong>Sacred Number:</strong> 9</li>
+                                        <li><strong>Realm:</strong> The Crystal Labyrinth</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="god-card slaanesh">
+                            <h3>Slaanesh - The Prince of Pleasure</h3>
+                            <div class="god-content">
+                                <div class="god-description">
+                                    <p>The Prince of Pleasure, deity of excess and sensation. Their daemons embody beauty and horror in equal measure.</p>
+                                    <h4>Daemon Types</h4>
+                                    <ul>
+                                        <li><strong>Keepers of Secrets:</strong> Greater Daemons, masters of temptation</li>
+                                        <li><strong>Daemonettes:</strong> Lesser Daemons, swift and deadly</li>
+                                        <li><strong>Fiends:</strong> Multi-limbed hunting beasts</li>
+                                        <li><strong>Seekers:</strong> Daemonette cavalry on steeds</li>
+                                    </ul>
+                                </div>
+                                <div class="god-aspects">
+                                    <h4>Aspects</h4>
+                                    <ul>
+                                        <li><strong>Domain:</strong> Pleasure, Pain, Perfection</li>
+                                        <li><strong>Symbol:</strong> Mark of Slaanesh</li>
+                                        <li><strong>Sacred Number:</strong> 6</li>
+                                        <li><strong>Realm:</strong> The Palace of Pleasure</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="manifestation">
+                    <h2>Manifestation</h2>
+                    <div class="manifestation-content">
+                        <div class="manifestation-types">
+                            <h3>Methods of Manifestation</h3>
+                            <ul>
+                                <li><strong>Warp Storms:</strong> Natural phenomena that weaken reality's fabric</li>
+                                <li><strong>Ritual Summoning:</strong> Carefully orchestrated ceremonies by cultists</li>
+                                <li><strong>Possession:</strong> Taking control of mortal hosts</li>
+                                <li><strong>Mass Violence:</strong> Large-scale conflict weakening reality</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="manifestation-requirements">
+                            <h3>Maintaining Presence</h3>
+                            <ul>
+                                <li><strong>Warp Energy:</strong> Constant supply needed to remain manifest</li>
+                                <li><strong>Anchoring Points:</strong> Ritual sites or possessed vessels</li>
+                                <li><strong>Psychic Conduits:</strong> Psykers or warp-touched individuals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="notable-campaigns">
+                    <h2>Notable Campaigns</h2>
+                    <div class="campaign-grid">
+                        <div class="campaign-card">
+                            <h3>The First War for Armageddon</h3>
+                            <div class="campaign-content">
+                                <p>A massive daemonic invasion led by Angron, the Daemon Primarch of the World Eaters, and his Bloodthirster lieutenants.</p>
+                                <ul class="campaign-details">
+                                    <li><strong>Date:</strong> 444.M41</li>
+                                    <li><strong>Location:</strong> Armageddon</li>
+                                    <li><strong>Outcome:</strong> Imperial Victory</li>
+                                    <li><strong>Impact:</strong> Grey Knights intervention revealed</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="campaign-card">
+                            <h3>Plague Wars</h3>
+                            <div class="campaign-content">
+                                <p>Nurgle's forces invaded Ultramar, led by Mortarion and his plague daemon armies.</p>
+                                <ul class="campaign-details">
+                                    <li><strong>Date:</strong> Early M42</li>
+                                    <li><strong>Location:</strong> Ultramar</li>
+                                    <li><strong>Outcome:</strong> Imperial Victory</li>
+                                    <li><strong>Impact:</strong> Devastation of multiple worlds</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="campaign-card">
+                            <h3>Fall of Cadia</h3>
+                            <div class="campaign-content">
+                                <p>Massive daemonic incursions during Abaddon's 13th Black Crusade, culminating in Cadia's destruction.</p>
+                                <ul class="campaign-details">
+                                    <li><strong>Date:</strong> 999.M41</li>
+                                    <li><strong>Location:</strong> Cadia</li>
+                                    <li><strong>Outcome:</strong> Chaos Victory</li>
+                                    <li><strong>Impact:</strong> Creation of the Great Rift</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="daemon-engines">
+                    <h2>Daemon Engines</h2>
+                    <div class="engine-categories">
+                        <div class="engine-type">
+                            <h3>Soul Grinders</h3>
+                            <p>Massive war machines powered by bound daemon princes, combining mechanical might with daemonic power.</p>
+                            <ul class="engine-details">
+                                <li><strong>Armament:</strong> Heavy siege weapons</li>
+                                <li><strong>Purpose:</strong> Heavy assault and siege warfare</li>
+                                <li><strong>Origin:</strong> Dark Mechanicum fusion</li>
+                            </ul>
+                        </div>
+
+                        <div class="engine-type">
+                            <h3>Heldrakes</h3>
+                            <p>Daemon-possessed aircraft that hunt in the skies of battlefields.</p>
+                            <ul class="engine-details">
+                                <li><strong>Armament:</strong> Baleflamer or Hades autocannon</li>
+                                <li><strong>Purpose:</strong> Air superiority and ground attack</li>
+                                <li><strong>Origin:</strong> Corrupted Thunderhawks</li>
+                            </ul>
+                        </div>
+
+                        <div class="engine-type">
+                            <h3>Maulerfiends</h3>
+                            <p>Beast-like engines that hunt and destroy enemy vehicles.</p>
+                            <ul class="engine-details">
+                                <li><strong>Armament:</strong> Magma cutters and lasher tendrils</li>
+                                <li><strong>Purpose:</strong> Anti-vehicle assault</li>
+                                <li><strong>Origin:</strong> Warped war machines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
